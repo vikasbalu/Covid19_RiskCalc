@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Covid-19 Risk Predictor</title>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Predict Covid-19 Risk</h1><br><br>
+  {{ prediction_text }}
+     
+    <form action="{{ url_for('predict')}}"method="post">
+
+    		<p>Breathing Problems:</p>
+    	<input type="radio" name="Breathing Problem" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Breathing Problem"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Fever:</p>
+    	<input type="radio" name="Fever" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Fever" value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+
+    		<p>Dry Cough:</p>
+    	<input type="radio" name="Dry Cough" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Dry Cough"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Sore throat :</p>
+    	<input type="radio" name="Sore throat" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Sore throat" value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Running Nose:</p>
+    	<input type="radio" name="Running Nose" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Running Nose"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Asthma:</p>
+    	<input type="radio" name="Asthma" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Asthma" value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Chronic Lung Disease:</p>
+    	<input type="radio" name="Chronic Lung Disease" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Chronic Lung Disease"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Headache:</p>
+    	<input type="radio" name="Headache" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Headache" value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Heart Disease:</p>
+    	<input type="radio" name="Heart Disease" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Heart Disease"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Diabetes:</p>
+    	<input type="radio" name="Diabetes" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Diabetes" value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Hyper Tension:</p>
+    	<input type="radio" name="Hyper Tension" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Hyper Tension"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+  		  	<p>Fatigue :</p>
+    	<input type="radio" name="Fatigue " value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Fatigue " value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Gastrointestinal Problems:</p>
+    	<input type="radio" name="Gastrointestinal" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Gastrointestinal"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    	<p>Abroad travel:</p>
+    	<input type="radio" name="Abroad travel" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Abroad travel" value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Contact with COVID Patient:</p>
+    	<input type="radio" name="Contact with COVID Patient" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Contact with COVID Patient"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Attended Large Gathering:</p>
+    	<input type="radio" name="Attended Large Gathering" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Attended Large Gathering" value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Visited Covid Public Exposed Places:</p>
+    	<input type="radio" name="Visited Public Exposed Places" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Visited Public Exposed Places"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Family working in Public Covid Exposed Places:</p>
+    	<input type="radio" name="Family working in Public Exposed Places" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Family working in Public Exposed Places" value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+    		<p>Wearing Masks Always:</p>
+    	<input type="radio" name="Wearing MasksSanitization from Market" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Wearing MasksSanitization from Market"  value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+  		  	<p>Sanitization Regularly :</p>
+    	<input type="radio" name="Sanitization from Market" value= "1" required="required" />
+    	<label for="1">Yes</label><br>
+    	<input type="radio" name="Sanitization from Market" value= "0" required="required" />
+    	<label for="0">No</label><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+ 
+
+ </div>
+
+
+</body>
+</html>
