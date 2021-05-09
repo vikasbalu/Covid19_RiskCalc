@@ -8,9 +8,8 @@
 
 <body>
  <div class="login">
-	<h1>Predict Covid-19 Risk</h1><br><br><br>
-  {{ prediction_text }}
-     <br><br><br>
+	<h1>Predict Covid-19 Risk</h1><br><br>
+     
     <form action="{{ url_for('predict')}}"method="post">
 
     		<p>Breathing Problems:</p>
@@ -134,7 +133,9 @@
     	<input type="radio" name="Sanitization from Market" value= "0" required="required" />
     	<label for="0">No</label><br>
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+        <button  <a href="result.html" class="btn btn-primary btn-block btn-large">PREDICT </a> </button>
+        
+         
     </form>
 
    <br>
