@@ -45,47 +45,46 @@ model = LogisticRegression()
 model.fit(x_train, y_train)
 y_pred = model.predict(x_test)
 acc_logreg=model.score(x_test, y_test)*100
-acc_logreg
+print("logisticRegression is=",acc_logreg)
 
 from sklearn.ensemble import RandomForestRegressor
 model = RandomForestRegressor(n_estimators=1000)
 model.fit(x_train, y_train)
 acc_randomforest=model.score(x_test, y_test)*100
-acc_randomforest
+print("RandomForestRegressor is =",acc_randomforest)
 
 from sklearn.ensemble import GradientBoostingRegressor
 GBR = GradientBoostingRegressor(n_estimators=100, max_depth=4)
 GBR.fit(x_train, y_train)
 acc_gbk=GBR.score(x_test, y_test)*100
-acc_gbk
+print("GradientBoostingRegressor is =",acc_gbk)
 
 from sklearn.neighbors import KNeighborsClassifier
 knn = KNeighborsClassifier(n_neighbors=20)
 knn.fit(x_train, y_train)
 y_pred = knn.predict(x_test)
 acc_knn=knn.score(x_test, y_test)*100
-acc_knn
+print("KNeighborsClassifier is =",acc_knn)
 
 from sklearn import tree
 t = tree.DecisionTreeClassifier()
 t.fit(x_train,y_train)
 y_pred = t.predict(x_test)
 acc_decisiontree=t.score(x_test, y_test)*100
-acc_decisiontree
+print("Decisiontree is =",acc_decisiontree)
 
 from sklearn.naive_bayes import GaussianNB
 model = GaussianNB()
 model.fit(x_train,y_train)
 acc_gaussian= model.score(x_test, y_test)*100
-acc_gaussian
+print("GaussianNB is =",acc_gaussian)
 
 from sklearn import svm
 clf = svm.SVC(kernel='linear')
 clf.fit(x_train, y_train)
 y_pred = clf.predict(x_test)
 acc_svc=clf.score(x_test, y_test)*100
-acc_svc
-
+print("SVM is =",acc_svc)
 dtc=t.fit(x,y)
 
 pickle.dump(dtc, open('model.pkl','wb'))

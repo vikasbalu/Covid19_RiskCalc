@@ -26,7 +26,7 @@ def predict():
     else :
         msg=" Low "
     
-    return render_template('index.html', prediction_text='The Risk Of Covid-19 for you is {} '.format(msg))
+    return render_template('result.html', prediction_text='The Risk Of Covid-19 for you is {} '.format(msg))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
