@@ -50,7 +50,7 @@ print("logisticRegression is=",acc_logreg)
 print(confusion_matrix(y_test, y_pred))
 
 from sklearn.ensemble import RandomForestClassifier
-rf = RandomForestClassifier(n_estimators=1000)
+rf = RandomForestClassifier(n_estimators=500)
 rf.fit(x_train, y_train)
 y_pred = rf.predict(x_test)
 acc_randomforest=rf.score(x_test, y_test)*100
