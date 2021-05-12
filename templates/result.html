@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html >
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-  <div class="bg">
    <h1 align="center">RESULT</h1><BR>
-<h1>   {{ prediction_text }} </h1>
+<h1 align="center">   {{ prediction_text }} </h1>
     <title>Result</title>
+
        <style>
 
 
@@ -36,25 +37,32 @@
 }
 
 .button:hover {
-  background-color: black;
+  background-color:black;
   color: white;
 }
-.bg{
-  background: url("image/5.png");
-  height: 70vh;
-  background-size:100%;
-  background-position:center;
-  position:100%;
+  .na {
 
+    text-align:center;
+    text-align-last:center;
+  }
+  body{
+        background-image: url("{{url_for('static',filename='img/result.jpg')}}");
+ 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+      }
 }
 </style>
 </head>
-
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <body>
-
+  
+<div class="na">
 
 <a class ="button" href="{{ url_for('index')}}" class="btn btn-primary btn-block btn-large">PREDICT AGAIN</a>
-<a class="button"   href="{{ url_for('home')}}">BACK</a>
+&nbsp&nbsp&nbsp&nbsp&nbsp
+<a class="button" href="{{ url_for('home')}}">BACK</a>
 
  
         </div>

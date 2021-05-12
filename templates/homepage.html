@@ -7,12 +7,9 @@
     <style>
     	body{
     		background-image: url("{{url_for('static',filename='img/b1.jpg')}}");
-    		background-size: cover;
-    		font-family: 'Poppins', sans-serif;
-    		height: 100vh;
-			background-size: cover;
-			background-position:center;
-			position: relative;
+    		 background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
     	}
 			.wrapper {
 				width: 1170px;
@@ -51,7 +48,7 @@
 <li><a href="{{ url_for('symptoms')}}">Symptoms</a></li>
 <li><a href="{{ url_for('precautions')}}">Precautions</a></li>
 <li><a href="{{ url_for('treatments')}}">Treatments</a></li>
-<li><a href="{{ url_for('index')}}"target="new">Covid Risk Level Prediction</a></li>
+<li><a href="{{ url_for('index')}}">Covid Risk Level Prediction</a></li>
 </ul>
 </div>
 </header>

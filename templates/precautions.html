@@ -43,20 +43,12 @@ font-size: 20px;
   color:black;
 
 }
-
-
-.bg {
-  /* The image used */
-  background-image: url("image/5.png");
-
-  /* Full height */
-  height: 100%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
+  body{
+        background-image: url("{{url_for('static',filename='img/5.png')}}");
   background-repeat: no-repeat;
+  background-attachment: fixed;  
   background-size: cover;
-}
+      }
 
  
   .na {
