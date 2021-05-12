@@ -1,12 +1,44 @@
 <!DOCTYPE html>
-<!--Code by Divinector (www.divinectorweb.com)-->
 <html lang="en">
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title></title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">    
+    <title>HomePage</title>    
+    <style>
+    	body{
+    		background-image: url("{{url_for('static',filename='img/b1.jpg')}}");
+    		background-size: cover;
+    		font-family: 'Poppins', sans-serif;
+    		height: 100vh;
+			background-size: cover;
+			background-position:center;
+			position: relative;
+    	}
+			.wrapper {
+				width: 1170px;
+				margin: auto;
+			}
+			.nav-area {
+				float: right;
+				list-style: none;
+				margin-top: 30px;
+			}
+			.nav-area li {
+				display: inline-block;
+			}
+			.nav-area li a {
+				color: #fff;
+				text-decoration: none;
+				padding: 5px 20px;
+				font-family: poppins;
+				font-size: 16px;
+				text-transform: uppercase;
+			}
+			.nav-area li a:hover {
+				background: #fff;
+				color: #333;
+			}
+    </style>
 </head>
 <body>
     <header>
@@ -15,11 +47,11 @@
           
         </div>
 <ul class="nav-area">
-<li><a href="homepage.html">HomePage</a></li>
-<li><a href="Symptoms.html">Symptoms</a></li>
-<li><a href="Precautions.html">Precautions</a></li>
-<li><a href="treatments.html">Treatments</a></li>
-<li><a href="http://127.0.0.1:5000/"target="new">Covid Risk Level Prediction</a></li>
+<li><a href="{{ url_for('home')}}">HomePage</a></li>
+<li><a href="{{ url_for('symptoms')}}">Symptoms</a></li>
+<li><a href="{{ url_for('precautions')}}">Precautions</a></li>
+<li><a href="{{ url_for('treatments')}}">Treatments</a></li>
+<li><a href="{{ url_for('index')}}"target="new">Covid Risk Level Prediction</a></li>
 </ul>
 </div>
 </header>

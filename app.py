@@ -7,14 +7,27 @@ model = pickle.load(open('model.pkl', 'rb'))
 
 @app.route('/')
 def home():
+    return render_template('homepage.html')
+
+@app.route('/precautions')
+def precautions():
+    return render_template('precautions.html')
+
+@app.route('/index')
+def index():
     return render_template('index.html')
+
+@app.route('/symptoms')
+def symptoms():
+    return render_template('Symptoms.html')
+
+@app.route('/treatments')
+def treatments():
+    return render_template('treatments.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    '''
-    For rendering results on HTML GUI
-    '''
-    
+       
     int_features = [int(x) for x in request.form.values()]
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
