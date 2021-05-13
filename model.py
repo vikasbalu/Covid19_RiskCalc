@@ -97,7 +97,7 @@ acc_svc=clf.score(x_test, y_test)*100
 print("SVM is =",acc_svc)
 print(confusion_matrix(y_test, y_pred))
 
-dtc=t.fit(x,y)
+dtc=rf.fit(x,y)
 
 pickle.dump(dtc, open('model.pkl','wb'))
 
