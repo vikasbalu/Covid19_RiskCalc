@@ -102,3 +102,20 @@ dtc=rf.fit(x,y)
 pickle.dump(dtc, open('model.pkl','wb'))
 
 model = pickle.load(open('model.pkl','rb'))
+
+import seaborn as sns
+corelation = covid.corr()
+sns.heatmap(corelation, xticklabels=corelation.columns, yticklabels=corelation.columns, annot=True)
+
+covid.head()
+covid.describe()
+covid.shape
+covid.columns
+covid.isnull().sum()
+c=covid
+c.head()
+import seaborn as sns
+corelation = c.corr()
+sns.heatmap(corelation, xticklabels=corelation.columns, yticklabels=corelation.columns, annot=True)
+sns.pairplot(c)
+sns.distplot(c['fever'])
