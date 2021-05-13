@@ -5,7 +5,8 @@
 
 body {
 	font-family: 'Poppins', sans-serif;
-    
+    background-image: url("{{url_for('static',filename='img/b1.jpg')}}");
+    background-size: cover;
     
 }
 .wrapper {
