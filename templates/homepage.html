@@ -3,7 +3,8 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <title>HomePage</title>    
+    <title>HomePage</title>  
+   <div class="a"><h1 align="center"> COVID19 RISK PREDICTION  </h1></div>
     <style>
     	body{
     		background-image: url("{{url_for('static',filename='img/b1.jpg')}}");
@@ -11,10 +12,11 @@
   background-attachment: fixed;  
   background-size: cover;
     	}
-			.wrapper {
-				width: 1170px;
-				margin: auto;
-			}
+    	.a{
+    		height: 50px;
+            width: 1520px;
+		  background-color: rgb(255, 255, 255,0.5);
+    	}
 			.nav-area {
 				float: right;
 				list-style: none;
@@ -39,10 +41,10 @@
 </head>
 <body>
     <header>
-    <div class="wrapper">
-        <div class="logo">
+    
+        
           
-        </div>
+     
 <ul class="nav-area">
 <li><a href="{{ url_for('home')}}">HomePage</a></li>
 <li><a href="{{ url_for('symptoms')}}">Symptoms</a></li>
@@ -50,7 +52,7 @@
 <li><a href="{{ url_for('treatments')}}">Treatments</a></li>
 <li><a href="{{ url_for('index')}}">Covid Risk Level Prediction</a></li>
 </ul>
-</div>
+
 </header>
 
 </body>
