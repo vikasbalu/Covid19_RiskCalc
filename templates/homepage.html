@@ -7,7 +7,7 @@
    <div class="a"><h1 align="center"> COVID19 RISK PREDICTION  </h1></div>
     <style>
     	body{
-    		background-image: url("{{url_for('static',filename='img/b1.jpg')}}");
+    		background-image: url("{{url_for('static',filename='img/homepage.jpg')}}");
     		 background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
@@ -46,11 +46,14 @@
           
      
 <ul class="nav-area">
-<li><a href="{{ url_for('home')}}">HomePage</a></li>
+
 <li><a href="{{ url_for('symptoms')}}">Symptoms</a></li>
 <li><a href="{{ url_for('precautions')}}">Precautions</a></li>
 <li><a href="{{ url_for('treatments')}}">Treatments</a></li>
 <li><a href="{{ url_for('index')}}">Covid Risk Level Prediction</a></li>
+<li><a href="https://www.worldometers.info/coronavirus/country/india/" target="new">Covid-19 India Update</a></li>
+
+<li><a href="{{ url_for('contact')}}">Help Line and Bed Availability</a></li>
 </ul>
 
 </header>
