@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<div class="bb">
 <head>
-    <div class="bb">
+    
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>HomePage</title> 
@@ -9,7 +10,7 @@
     <style>
     	body{
         background-image: url("{{url_for('static',filename='img/contact.jpg')}}");
-    background-color: rgb(255, 255, 255,0.5);
+   
    background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
@@ -21,7 +22,7 @@
     text-align-last:center;
   }
   .bb{
-    height: 3680px;
+    height: 100%;
      width: 100%;
            
             background-color: rgb(255, 255, 255,0.5);
@@ -249,7 +250,7 @@ Chhattisgarh (Helpline: 104 and 0788-2210772/73)<a href="https://cg.nic.in/healt
 </h3>
 
 <h1>Mizoram</h1>
-<h3>
+<h3>Mizoram:
 0389-2323336/2322336/2318336<br>
 The COVID-19 Control room contact is 1070/0389-2342520/7629072785. <br>
 People can also reach out to the control room via WhatsApp on 9366331931.<br>
@@ -264,14 +265,14 @@ Nagaland:0370-227003. Helpline: 7005539653<br></h3>
 <h3>
 Puducherry:<a href="https://covid19dashboard.py.gov.in/" target="new">https://covid19dashboard.py.gov.in/</a><br>
 </h3>
-</div>
+
 </body>
 <div class="na">
 
   <a href="{{ url_for('home')}}" class="button">BACK</a>
 
-  
+  </head>
 </div>
-
+</div>
 
 </html>
