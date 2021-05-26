@@ -118,4 +118,4 @@ import seaborn as sns
 corelation = c.corr()
 sns.heatmap(corelation, xticklabels=corelation.columns, yticklabels=corelation.columns, annot=True)
 sns.pairplot(c)
-sns.distplot(c['fever'])
+sns.distplot(c['Fever'])
