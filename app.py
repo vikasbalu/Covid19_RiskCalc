@@ -28,6 +28,10 @@ def symptoms():
 @app.route('/treatments')
 def treatments():
     return render_template('treatments.html')
+    
+@app.route('/eda')
+def eda():
+    return render_template('eda.html')
 
 @app.route('/predict',methods=['POST'])
 def predict():
